@@ -154,3 +154,4 @@ cython_debug/
 Lectures
 Practic
 .vscode
+test.py
