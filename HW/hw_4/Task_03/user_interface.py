@@ -1,4 +1,4 @@
-from main import *
+from operation import *
 
 # ✔ Допустимые действия: пополнить, снять, выйти
 def interface_user():
@@ -11,13 +11,14 @@ def interface_user():
             "2 - Снять деньги\n"
             "3 - Выйти\n"
         )
+        if num_type == '1' or num_type == '2':
+            print('Сумма для пополнения и снятия должна быть кратной 50!')
         match num_type:
             case "1":
-                pass
+                account_balance = replenishment_of_balance(account_balance)
             case "2":
-                pass
+                account_balance = withdraw_cash(account_balance)
             case "3":
                 break
             case _:
-                # print('Вы ввели несуществующую операцию, попробуйте еще раз')
-                print(account_balance)
+                print('Вы ввели несуществующую операцию, попробуйте еще раз')
